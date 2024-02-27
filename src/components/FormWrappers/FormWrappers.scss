@@ -1,0 +1,46 @@
+@import "components/Shared/Styles/typography.scss";
+@import "components/Shared/Styles/colors.scss";
+
+.fortifid-form,
+.fortifid-ssn-form,
+.fortifid-basic-info-form,
+.fortifid-income-information,
+.fortifid-income-housing,
+.fortifid-summary-form,
+.fortifid-existing-customer-info-form{
+  >form>div>div {
+    >.fortifid-form-actions {
+      >button {
+        width: 148px;
+      }
+    }
+  }
+}
+
+
+.fortifid-form-actions {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: solid 1px $colorCoolGray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+@include media-breakpoint-down(xs) {
+.fortifid-form,
+.fortifid-ssn-form,
+.fortifid-basic-info-form,
+.fortifid-income-information,
+.fortifid-income-housing,
+.fortifid-summary-form,
+.fortifid-existing-customer-info-form{
+  >form>div>div {
+    >.fortifid-form-actions {
+      >button {
+        width: 95px !important;
+      }
+    }
+  }
+}
+}

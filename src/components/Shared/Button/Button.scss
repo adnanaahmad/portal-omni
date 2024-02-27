@@ -1,0 +1,242 @@
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/typography.scss";
+
+%fortifid-button {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-family: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.fortifid-button-large {
+  height: 48px;
+  min-width: 147px;
+  padding: 14px 32px;
+
+  font-weight: $fontMedium;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.fortifid-button-medium {
+  height: 40px;
+  padding: 11px 16px;
+
+  font-weight: $fontMedium;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.fortifid-button-small {
+  border-width: 1px;
+
+  height: 32px;
+  padding: 7px 16px;
+
+  font-weight: $fontMedium;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.fortifid-button-primary {
+  @extend %fortifid-button;
+
+  background-color: $colorPrimaryBlue;
+  border-color: $colorPrimaryBlue;
+  color: $colorWhite;
+  border-radius:4px;
+
+  &:active {
+    background-color: darken($colorPrimaryBlue, 10%);
+  }
+
+  &:disabled {
+    color: lighten($colorWhite, 30%);
+    background-color: lighten($colorPrimaryBlue, 10%);
+    border-color: lighten($colorPrimaryBlue, 10%);
+    border-radius:4px;
+
+    &:hover {
+      background-color: lighten($colorPrimaryBlue, 10%);
+      border-color: lighten($colorPrimaryBlue, 10%);
+    }
+  }
+
+  &:hover {
+    background-color: darken($colorPrimaryBlue, 10%);
+    border-color: darken($colorPrimaryBlue, 10%);
+    transition: all 0.3s ease;
+  }
+}
+
+.fortifid-button-destructive-primary {
+  @extend %fortifid-button;
+
+  background-color: $colorRed;
+  border-color: $colorRed;
+  color: $colorWhite;
+
+  &:active {
+    background-color: darken($colorRed, 10%);
+  }
+
+  &:disabled {
+    color: lighten($colorDarkGray, 30%);
+    background-color: lighten($colorCoolGray, 10%);
+    border-color: lighten($colorCoolGray, 10%);
+
+    &:hover {
+      background-color: lighten($colorCoolGray, 10%);
+      border-color: lighten($colorCoolGray, 10%);
+    }
+  }
+
+  &:hover {
+    background-color: darken($colorRed, 10%);
+    border-color: darken($colorRed, 10%);
+    transition: all 0.3s ease;
+  }
+}
+
+.fortifid-button-secondary {
+  @extend %fortifid-button;
+
+  background-color: transparent;
+  border-color: $colorPrimaryBlue;
+  color: $colorPrimaryBlue;
+
+  &:active {
+    background-color: lighten($colorPrimaryBlue, 55%);
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: lighten($colorDarkGray, 30%);
+    border-color: lighten($colorDarkGray, 30%);
+
+    &:hover {
+      color: lighten($colorDarkGray, 30%);
+      border-color: lighten($colorDarkGray, 30%);
+      background-color: transparent;
+    }
+  }
+
+  &:hover {
+    background-color: lighten($colorPrimaryBlue, 55%);
+    transition: color 0.3s ease;
+  }
+}
+
+.fortifid-button-destructive-secondary {
+  @extend %fortifid-button;
+
+  background-color: transparent;
+  border-color: $colorPrimaryBlue;
+  color: $colorPrimaryBlue;
+
+  &:active {
+    background-color: lighten($colorPrimaryBlue, 55%);
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: lighten($colorDarkGray, 30%);
+    border-color: lighten($colorDarkGray, 30%);
+
+    &:hover {
+      color: lighten($colorDarkGray, 30%);
+      border-color: lighten($colorDarkGray, 30%);
+      background-color: transparent;
+    }
+  }
+
+  &:hover {
+    background-color: lighten($colorPrimaryBlue, 55%);
+    transition: color 0.3s ease;
+  }
+}
+
+.fortifid-button-tertiary {
+  @extend %fortifid-button;
+
+  // color: $colorPrimaryNavy;
+  color:$colorExistingApplication;
+  background-color: lighten($colorCoolGray, 10%);
+  border-color: lighten($colorCoolGray, 10%);
+
+  &:active {
+    background-color: $colorCoolGray;
+  }
+
+  &:disabled {
+    color: lighten($colorDarkGray, 30%);
+    background-color: lighten($colorCoolGray, 10%);
+    border-color: lighten($colorCoolGray, 10%);
+
+    &:hover {
+      background-color: lighten($colorCoolGray, 10%);
+      border-color: lighten($colorCoolGray, 10%);
+    }
+  }
+
+  &:hover {
+    background-color: $colorCoolGray;
+    border-color: $colorCoolGray;
+    transition: all 0.3s ease;
+  }
+}
+
+.fortifid-button-destructive {
+  @extend %fortifid-button;
+
+  color: $colorRed;
+  background-color: $colorWhite;
+  border-color: $colorRed;
+
+  &:active {
+    background-color: lighten($colorRed, 50%);
+  }
+
+  &:disabled {
+    background-color: $colorWhite;
+    color: lighten($colorDarkGray, 30%);
+    border-color: lighten($colorDarkGray, 30%);
+
+    &:hover {
+      color: lighten($colorDarkGray, 30%);
+      border-color: lighten($colorDarkGray, 30%);
+      background-color: $colorWhite;
+    }
+  }
+
+  &:hover {
+    background-color: lighten($colorRed, 50%);
+    transition: color 0.3s ease;
+  }
+}
+
+.fortifid-button-text {
+  @extend %fortifid-button;
+  border: none;
+  background-color: $colorWhite;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:disabled {
+    color: lighten($colorDarkGray, 30%);
+    text-decoration: none;
+  }
+}

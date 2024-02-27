@@ -1,0 +1,107 @@
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-summary-form {
+    .fortifid-form-actions {
+        margin-top: 0px;
+        margin-bottom: 25px;
+        color: lighten($colorDarkGray, 15%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .business-info {
+
+            .FederalIdNumberButton {
+                color: #4F717F;
+                background-color: #E1E9ED;
+                border: none;
+                padding: 10px 20px;
+                margin-left: 15px;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .personal-info {
+
+            tr {
+                td {
+                    width: 100px;
+                }
+            }
+
+            .SSNButton {
+                color: #4F717F;
+                background-color: #E1E9ED;
+                border: none;
+                padding: 10px 20px;
+                margin-left: 10px;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .terms-section {
+        border-top: solid 1px #c2d2d9;
+        padding-top: 16px;
+        color: #324750;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .summary-btn {
+        >div>div>.fortifid-form-actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-top: none;
+
+            >button {
+                width: 148px;
+            }
+        }
+    }
+
+    .fortifid-form-fields {
+        color: $colorPrimaryNavy;
+    }
+
+    .fortifid-link-navigation {
+        float: right;
+        color: $colorPrimaryNavy;
+    }
+
+    &__former {
+        color: lighten($colorDarkGray, 15%);
+        margin-bottom: 25px;
+    }
+}
+
+div#form-section-heading {
+    @include typography-summary-section-heading;
+}
+
+@include media-breakpoint-down(xs) {
+    .summary-btn {
+        >div>div>.fortifid-form-actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            >button {
+                width: 100px !important;
+            }
+        }
+    }
+}
+
+.federal-number {
+    @include media-breakpoint-down(sm) {
+        display: block !important;
+        width: 100%; 
+        padding-top: 5px !important;
+    }
+}

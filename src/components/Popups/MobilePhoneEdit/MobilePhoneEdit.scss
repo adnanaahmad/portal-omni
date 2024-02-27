@@ -1,0 +1,16 @@
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/typography.scss";
+
+
+.popup-content {
+    width: 90% !important;
+    padding: 10px;
+
+    @media screen and (min-width: 768px) {
+        width: 55% !important;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 30% !important;
+    }
+}

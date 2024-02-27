@@ -1,0 +1,108 @@
+@import "~react-toastify/dist/ReactToastify.css";
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-toast-message {
+  display: flex;
+  align-items: stretch;
+
+  &__icon-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.fortifid-toast-icon {
+  width: 20px;
+  height: 20px;
+
+  margin-right: 20px;
+
+  &.error {
+    color: $colorRed;
+  }
+
+  &.info {
+    color: $colorPrimaryBlue;
+  }
+
+  &.warning {
+    color: $colorYellow;
+  }
+
+  &.success {
+    color: $colorGreen;
+  }
+
+  &.default {
+    color: $colorBlack;
+  }
+}
+
+/** Classes for the toast container **/
+.Toastify__toast-container {
+  width: 100%;
+  max-width: 648px;
+}
+
+.Toastify__toast-container--top-right {
+  top: 100px;
+  @include media-breakpoint-down(xs) {
+    top: 60px;
+    right: 0;
+  }
+}
+
+.Toastify__toast-container--top-center {
+  top: 100px;
+  left: 50%;
+  @include media-breakpoint-down(xs) {
+    top: 60px;
+    right: 0;
+  }
+}
+
+/** Classes for the displayed toast **/
+.Toastify__toast {
+  min-height: 48px;
+  width: 100%;
+  max-width: 648px;
+  font-family: inherit;
+}
+.Toastify__toast--default {
+  background: $colorWhite;
+}
+.Toastify__toast--info {
+  background: lighten($colorPrimaryBlue, 55%);
+}
+.Toastify__toast--success {
+  background: lighten($colorGreen, 40%);
+}
+.Toastify__toast--warning {
+  background: lighten($colorYellow, 40%);
+}
+.Toastify__toast--error {
+  background: lighten($colorRed, 50%);
+}
+.Toastify__toast-body {
+  font-family: inherit;
+  color: $colorBlack;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/** Classes for the close button. Better use your own closeButton **/
+.Toastify__close-button {
+  color: $colorBlack;
+  padding: 7px 0;
+}
+
+/** Classes for the progress bar **/
+.Toastify__progress-bar {
+  visibility: hidden;
+}

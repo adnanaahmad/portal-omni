@@ -1,0 +1,16 @@
+{
+  "start_page": "Start Page",
+  "end_page": "End Page",
+  "restore": "Restore",
+  "consumer_insights_request": "Consumer Insights Request",
+  "business_insights_request": "Business Insights Request",
+  "mfa_request": "MFA Request",
+  "mfa_verify_request": "MFA Verify Request",
+  "document_request": "Document Request",
+  "document_verify_request": "Document Verify Request",
+  "bank_request": "Bank Request",
+  "bank_verify_request": "Bank Verify Request",
+  "income_insights_request": "Income Insights Request",
+  "restore_email_request": "Restore Email Request",
+  "complete_email_request": "Complete Email Request"
+}

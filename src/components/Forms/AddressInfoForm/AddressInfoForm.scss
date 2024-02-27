@@ -1,0 +1,20 @@
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-address-info {
+  &__fields-container {
+    display: flex;
+    justify-content: center;
+    & > :not(:first-child) {
+      margin-left: 16px;
+    }
+  }
+  &__question-container {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0 16px 0;
+    @include typography-subheadline2;
+    span {
+      text-align: center;
+    }
+  }
+}

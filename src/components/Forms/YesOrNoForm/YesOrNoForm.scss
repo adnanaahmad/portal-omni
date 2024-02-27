@@ -1,0 +1,89 @@
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-existing-customer-form {
+  padding-top: 40px;
+
+  &__button {
+    width: 148px;
+    @include media-breakpoint-down(sm) {
+      width: 95px;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include typography-headline;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include typography-title2;
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .fortifid-form-actions {
+    justify-content: center;
+  }
+}
+.fortifid-existing-cutomer-type{
+  form{
+    .existingCustomer-selection{
+      text-align: left;
+      width: 100%;
+      margin-bottom: 30px;
+      display: -webkit-inline-box;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    .fortifid-radio-input {
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #c2d2d9;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 232px;
+      height: 128px;
+      margin: 0px 16px;
+      padding:unset;
+      .fortifid-radio-input__label{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 20px;
+      }
+    }
+  }
+  .fortifid-form-actions{
+    justify-content: center;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .fortifid-existing-cutomer-type .fortifid-radio-input {
+    width: 150px  !important;
+    height: 128px;
+    margin: 0px 0px !important;
+        .fortifid-radio-input__label {
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px !important;
+          line-height: 8px;
+      }
+    }
+}
+.action-buttons {
+  justify-content: space-evenly;
+  @include media-breakpoint-down(sm) {
+  justify-content: space-between;
+}}

@@ -1,0 +1,31 @@
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-heading {
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-down(xs) {
+    margin: 24px 0;
+  }
+
+  &__title {
+    @include typography-headline;
+    margin: 0;
+    text-align: center;
+
+    @include media-breakpoint-down(xs) {
+      @include typography-title1;
+    }
+  }
+
+  &__subtitle {
+    @include typography-title2;
+    margin-top: 24px;
+    text-align: center;
+    @include media-breakpoint-down(xs) {
+      @include typography-body2;
+      margin-top: 16px;
+    }
+  }
+}

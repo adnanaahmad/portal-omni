@@ -1,0 +1,29 @@
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/fonts.scss";
+
+.fortifid-content {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  min-width: 320px;
+  background-color: lighten($colorCoolGray, 15%);
+}
+
+.fortifid-content-box {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  padding: 32px 0;
+}
+
+.fortifid-loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}

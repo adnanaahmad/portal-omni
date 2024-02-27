@@ -1,0 +1,101 @@
+$grid-columns: 16 !default;
+$grid-gutter-width: 32px !default;
+$grid-row-columns: 8 !default;
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
+$fontThin: 100;
+$fontExtraLight: 200;
+$fontLight: 300;
+$fontRegular: normal;
+$fontMedium: 500;
+$fontSemiBold: 600;
+$fontBold: bold;
+$fontExtraBold: 800;
+$fontBlack: 900;
+
+@mixin typography-headline {
+  font-weight: $fontMedium;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 41px;
+}
+@mixin continue-buttonText {
+  font-weight: $fontSemiBold;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin typography-title1 {
+  font-weight: $fontMedium;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 34px;
+}
+
+@mixin typography-title2 {
+  font-weight: $fontRegular;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@mixin typography-heading {
+  font-weight: $fontRegular;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin typography-subheadline {
+  font-weight: $fontRegular;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin typography-subheadline2 {
+  font-weight: $fontMedium;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin typography-body1 {
+  font-weight: $fontRegular;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin typography-body2 {
+  font-weight: $fontRegular;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@mixin typography-footnote {
+  font-weight: $fontRegular;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@mixin typography-caption {
+  font-weight: $fontRegular;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+@mixin typography-summary-section-heading {
+  font-weight: $fontMedium;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 41px;
+}

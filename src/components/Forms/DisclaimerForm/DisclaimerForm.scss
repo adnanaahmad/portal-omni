@@ -1,0 +1,49 @@
+@import "components/Shared/Styles/typography.scss";
+.fortifid-disclaimer-form >div >div >div h1{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 469px;
+}
+.fortifid-disclaimer-form >div >div >div > .fortifid-heading__subtitle{
+  width: 100%;
+  max-width: 795px;
+}
+  .fortifid-heading{ 
+    display:flex;  
+    justify-content: center;
+    align-items: center;
+  }
+
+.fortifid-disclaimer-form {
+  .disclaimer-button{
+    width:218px;
+  }
+  .fortifid-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:unset;
+  border-top:unset !important;
+  padding-top: 20px;
+}
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    // new design code
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    @include typography-headline;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include typography-title2;
+    margin-top: 24px;
+    text-align: center;
+  }
+}

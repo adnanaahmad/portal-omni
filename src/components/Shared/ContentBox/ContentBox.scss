@@ -1,0 +1,17 @@
+@import "components/Shared/Styles/typography.scss";
+
+.content-box {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 16px;
+  position: relative;
+  width: 100%;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-down(xs) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

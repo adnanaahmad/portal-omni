@@ -1,0 +1,24 @@
+@import "components/Shared/Styles/colors.scss";
+
+.fortifid-icon {
+  display: inline-block;
+  height: 22px;
+  position: relative;
+
+  svg {
+    height: 100%;
+    fill: currentColor;
+  }
+
+  .ibm-icon {
+    fill: none;
+  }
+
+  &__previous {
+    margin-right: 10px;
+  }
+
+  &__next {
+    margin-left: 10px;
+  }
+}

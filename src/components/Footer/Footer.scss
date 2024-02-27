@@ -1,0 +1,57 @@
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-footer {
+  background-color: $colorLightGray;
+  width: 100%;
+  height: 80px;
+  border-top: solid 1px $colorCoolGray;
+
+  @include media-breakpoint-down(xs) {
+    height: 40px;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    @include typography-body1;
+    color: lighten($colorDarkGray, 30%);
+    display: inline-block;
+    margin-right: 18px;
+
+    @include media-breakpoint-down(xs) {
+      @include typography-caption;
+      margin-right: 9px;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo1 {
+    @include media-breakpoint-down(xs) {
+      width: 52px;
+    }
+  }
+
+  &__logo2 {
+    @include media-breakpoint-down(xs) {
+      width: 20px;
+    }
+  }
+}

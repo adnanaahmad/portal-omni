@@ -1,0 +1,66 @@
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-get-govtDocuments-scanned {
+  padding-top: 40px;
+ 
+ 
+  .fortifid-radio-image-group.scan-type-selection {
+    width: 100%;
+    /* max-width: 120px; */
+    height: 94px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+     .fortifid-radio-image-input{
+        background: none;
+        border: unset;
+        height: unset;
+        padding: unset;
+        :hover {
+            background: none;
+            border: none;
+            padding-top: unset;
+        }
+    }
+}
+  &__heading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include typography-headline;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include typography-title2;
+    margin-top: 24px;
+    text-align: center;
+  }
+}
+.govt-doc-btn {
+  width: 148px;
+}
+@include media-breakpoint-down(sm) {
+  .govt-doc-btn {
+    width: 100px;
+  }
+  .fortifid-get-govtDocuments-scanned {
+  .fortifid-radio-image-group.scan-type-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .fortifid-radio-image-input{
+      width: unset;
+      margin: 40px;
+      height: 60px;
+    }
+  }
+}
+}

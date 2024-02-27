@@ -1,0 +1,196 @@
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-application-status {
+  display: flex;
+  flex: 1;
+
+  &__wrapper {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__toast-container {
+    position: static;
+  }
+
+  &__spinner {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__icon {
+    &.success {
+      color: $colorGreen;
+    }
+
+    &.warning {
+      color: $colorYellow;
+    }
+
+    &.large {
+      width: 62px;
+      height: 62px;
+    }
+  }
+
+  &__steps {
+    margin-bottom: 48px;
+  }
+
+  &__message-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__step-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  &__step-text {
+    font-size: 16px;
+    line-height: 24px;
+
+    & > strong {
+      font-weight: 600;
+    }
+  }
+
+  &__step-actions {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    & > * {
+      margin: 0 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+      align-items: center;
+      & > * {
+        margin: 10px 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__step-button {
+    min-width: 200px;
+
+    @include media-breakpoint-down(xs) {
+      max-width: 275px;
+      width: 100%;
+    }
+
+    &.green {
+      background: $colorGreen;
+      border: 1px solid $colorGreen;
+      cursor: default;
+
+      &:hover {
+        background: $colorGreen;
+        border: 1px solid $colorGreen;
+      }
+    }
+  }
+
+  &__waiting {
+    display: flex;
+    align-items: center;
+  }
+
+  &__waiting-message {
+    margin-left: 10px;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 18px;
+    color: lighten($colorDarkGray, 30%);
+  }
+
+  &__loader {
+    width: 20px;
+    height: 20px;
+
+    &::after {
+      background: $colorWhite;
+    }
+  }
+
+  &__retry {
+    @include typography-body1;
+    text-align: left;
+  }
+
+  &__contact-us {
+    text-align: center;
+    @include typography-subheadline2;
+
+    @include media-breakpoint-down(xs) {
+      @include typography-body2;
+    }
+  }
+}
+
+.fortifid-message-box {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  min-height: 48px;
+  margin: 1px 0;
+  padding: 10px 20px;
+
+  background: $colorWhite;
+
+  &:first-child {
+    border-top: 1px solid $colorWhite;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $colorWhite;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: solid 1px $colorCoolGray;
+  }
+
+  &.disabled {
+    color: lighten($colorDarkGray, 30%);
+    align-items: center;
+  }
+
+  &.success {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    margin-left: 20px;
+    &.success {
+      color: $colorGreen;
+    }
+  }
+}

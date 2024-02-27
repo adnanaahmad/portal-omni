@@ -1,0 +1,63 @@
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+
+// main palette
+$colorPrimaryNavy: #142d53;
+$colorPrimaryBlue: #0376bc;
+$colorSecondaryTeal: #00b0b5;
+//existing button color change
+$colorExistingApplication:#4F717F;
+$colorRed: #de4a0b;
+$colorYellow: #ffc400;
+$colorGreen: #42c27d;
+
+// background colors
+
+$colorDarkGray: #324750;
+$colorCoolGray: #c2d2d9;
+$colorLightGray: #f6f6f6;
+
+// additional colors
+$colorFontPrimary: $colorPrimaryNavy;
+
+// should have a JS equivalent for redefining the color scheme
+@mixin defineColorHSL($color, $hue, $saturation, $lightness) {
+  #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");
+  #{$color}-h: #{$hue};
+  #{$color}-s: #{$saturation};
+  #{$color}-l: #{$lightness};
+}
+
+// return css color variable with different opacity value
+@function alpha($color, $opacity) {
+  $color: str-replace($color, "var(");
+  $color: str-replace($color, ")");
+  $color-h: var(#{$color + "-h"});
+  $color-s: var(#{$color + "-s"});
+  $color-l: var(#{$color + "-l"});
+  @return hsla($color-h, $color-s, $color-l, $opacity);
+}
+
+@function lighter($color, $percent) {
+  $color: str-replace($color, "var(");
+  $color: str-replace($color, ")");
+  $color-h: var(#{$color + "-h"});
+  $color-s: var(#{$color + "-s"});
+  $color-l: var(#{$color + "-l"});
+
+  @return hsl($color-h, $color-s, calc(#{$color-l} + #{$percent}));
+}
+
+// replace substring with another string
+// credits: https://css-tricks.com/snippets/sass/str-replace-function/
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+:root {
+  @include defineColorHSL(--color-primary, 216.2, 61.2%, 20.2%);
+}

@@ -1,0 +1,35 @@
+{
+  "personal_loan": [
+    "Business Financing",
+    "Consolidate Debt",
+    "Foster Green Initiative",
+    "Funeral Expense",
+    "Improve Home",
+    "Medical Expense",
+    "Purchase Home",
+    "Pursue Education",
+    "Refinance Car",
+    "Refinance Credit Cards",
+    "Relocation Expense",
+    "Special Purchase",
+    "Take a Vacation",
+    "Unexpected Expense",
+    "Wedding Expense",
+    "Vehicle Loan",
+    "Other"
+  ],
+  "small_business": [
+    "Business Financing",
+    "Consolidate Debt",
+    "Equipment Purchase",
+    "Foster Green Initiative",
+    "Inventory Purchase",
+    "Line Of Credit",
+    "Other",
+    "Real Estate Purchase",
+    "Refinance Credit Cards",
+    "Relocation Expense",
+    "Special Purchase",
+    "Unexpected Expense"
+  ]
+}

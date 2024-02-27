@@ -1,0 +1,71 @@
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-get-started-form {
+  padding-top: 40px;
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include typography-headline;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include typography-title2;
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .fortifid-form-actions {
+    justify-content: center;
+  }
+}
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.demoSwitch {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 60px;
+	height: 30px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+.demoSwitch:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + .demoSwitch {
+	background: #0496ee;
+}
+
+input:checked + .demoSwitch:after {
+	left: calc(100% - 0px);
+	transform: translateX(-100%);
+}
+
+.demoSwitch:active:after {
+	width: 130px;
+}
+.error-text {
+	text-align: center;
+	color: red;
+}

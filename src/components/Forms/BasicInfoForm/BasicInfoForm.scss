@@ -1,0 +1,21 @@
+@import "components/Shared/Styles/typography.scss";
+@import "components/Shared/Styles/colors.scss";
+
+.fortifid-basic-info-form {
+    &__fields-container {
+        display: flex;
+        justify-content: center;
+        & > :not(:first-child) {
+        margin-left: 16px;
+        }
+        padding-bottom: 16px;
+    }
+
+    &__subtitle-container {
+        @include typography-subheadline2;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 16px;
+        text-align: justify;
+    }
+}

@@ -1,0 +1,92 @@
+{
+  "header": {
+    "links": {
+      "back": "Espalda",
+      "restart": "Comenzar de nuevo",
+      "contact": "Contacto"
+    }
+  },
+  "formErrors": {
+    "requiredField": "Requerido"
+  },
+  "submitButton": "¡Vamos!",
+  "dln": {
+    "label": "Número de carnet de conducir",
+    "error": "Ingrese un número de licencia de conducir válido"
+  },
+  "email": {
+    "label": "Email",
+    "error": "Por favor, introduce una dirección de correo electrónico válida",
+    "suggestion": "Quiso decir {email}?"
+  },
+  "expirationdate": {
+    "label": "Fecha de expiración (MM/DD/YYYY)",
+    "error": "Por favor introduzca una fecha valida"
+  },
+  "firstname": {
+    "label": "El Primer Nombre",
+    "error": "El nombre solo puede incluir letras, guiones y apóstrofo"
+  },
+  "middlename": {
+    "label": "Segundo Nombre (opcional)",
+    "error": "El nombre solo puede incluir letras, guiones y apóstrofo"
+  },
+  "lastname": {
+    "label": "Nombre de Familia",
+    "error": "El nombre solo puede incluir letras, guiones y apóstrofo"
+  },
+  "phone": {
+    "label": "Número de teléfono móvil (xxx) xxx-xxxx",
+    "error": "Por favor ingrese un número de teléfono válido"
+  },
+  "consent": {
+    "label": "Al marcar esta casilla, acepto que he leído, comprendido y acepto {consentLink} y {termsLink}",
+    "error": "Debe aceptar el consentimiento y los términos de uso de FortifID para continuar",
+    "consentLink": {
+      "label": "Consentimiento de FortifID"
+    },
+    "termsLink": {
+      "label": "Condiciones de uso"
+    }
+  },
+  "ssn": {
+    "label": "Número de seguridad social",
+    "error": "Ingrese un número de seguro social válido"
+  },
+  "state": {
+    "label": "Estado de emisión",
+    "requiredField": "Se requiere selección"
+  },
+  "birthdate": {
+    "label": "Fecha de nacimiento (MM/DD/YYYY)",
+    "error": "Por favor introduzca una fecha valida"
+  },
+  "citizenship": {
+    "label": "¿Eres un ciudadano de los Estados Unidos?",
+    "optionTrue": "Si soy ciudadana estadounidense",
+    "optionFalse": "No, no soy ciudadana estadounidense"
+  },
+
+  "forms": {
+    "DLNForm": {
+      "title": "La información de su licencia de conducir"
+    },
+    "getStarted": {
+      "submit": "Empezar",
+      "title": "¿Qué tipo de préstamo le interesa?",
+      "subtitle": "Seleccione la opción que mejor se adapte a sus necesidades",
+      "loanTypes": {
+        "creditCard": "Tarjeta de crédito",
+        "personalLoan": "Préstamo personal",
+        "smallBusinessAndEquipment": "Pequeñas Empresas & Equipos"
+      }
+    },
+    "BasicInfoForm": {
+      "title": "Tu información básica",
+      "subtitle": "Todos los campos son obligatorios"
+    },
+    "SSNForm": {
+      "title": "¡Bienvenido, {name}! Proporcione su información personal."
+    }
+  }
+}

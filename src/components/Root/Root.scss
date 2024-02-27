@@ -1,0 +1,19 @@
+@import "components/Shared/Styles/colors.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html,
+body {
+  background: $colorLightGray;
+  font-family: Poppins, sans-serif, Arial;
+  color: $colorFontPrimary;
+  margin: 0;
+  max-width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}

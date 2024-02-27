@@ -1,0 +1,46 @@
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/typography.scss";
+
+%fortifid-link {
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    transition: color 0.5s ease;
+  }
+
+  &--disabled {
+    cursor: default;
+    color: $colorLightGray;
+  }
+}
+
+.fortifid-link-regular {
+  @extend %fortifid-link;
+  color: $colorPrimaryBlue;
+
+  &:active {
+    color: darken($colorPrimaryBlue, 10%);
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: darken($colorPrimaryBlue, 10%);
+  }
+}
+
+.fortifid-link-navigation {
+  @extend %fortifid-link;
+  @include typography-body2;
+  color: lighten($colorDarkGray, 15%);
+  display: flex;
+  align-items: center;
+}
+
+.edit-link {
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+}

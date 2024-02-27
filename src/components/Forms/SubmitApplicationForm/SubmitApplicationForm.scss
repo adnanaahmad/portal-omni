@@ -1,0 +1,53 @@
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-submit-application-loading {
+    // submit application process animation
+     margin-top: 120px;
+     overflow: hidden;
+    .loading-area {
+        margin-top:40px;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+
+        .loader {
+            height:60px;
+            width:60px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+    }
+   
+    
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .fortifid-form-actions {
+        margin-top: 0px;
+        margin-bottom: 25px;
+        color: lighten($colorDarkGray, 15%);
+    }
+
+    .fortifid-form-fields {
+        color: $colorPrimaryNavy;
+    }
+
+    .fortifid-link-navigation {
+        float: right;
+        color: $colorPrimaryNavy;
+    }
+
+    &__former {
+        color: lighten($colorDarkGray, 15%);
+        margin-bottom: 25px;
+    }
+}
+

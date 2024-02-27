@@ -1,0 +1,29 @@
+@import "components/Shared/Styles/typography.scss";
+@import "components/Shared/Styles/colors.scss";
+.phone-verification-container{
+    text-align: center;
+    width:100%;
+    max-width:273px;
+    .phone-verification-content{
+        h4{
+            @include typography-title1;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: $colorPrimaryNavy;
+        }
+        p{
+            @include typography-footnote;
+            /* or 162% */
+            text-align: center;
+            color: $colorBlack;
+        }
+        button{
+            width: 268px;
+            height: 40px;
+            border-radius: 3px;
+        }
+    }
+}

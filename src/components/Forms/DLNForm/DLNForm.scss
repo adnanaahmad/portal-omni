@@ -1,0 +1,26 @@
+@import "components/Shared/Styles/colors.scss";
+
+.fortifid-dln-form__nodln-checkbox {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  .fortifid-input-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    line-height: normal;
+    &::before {
+      margin-top: 0px;
+    }
+
+    &::after {
+      top: 2px;
+    }
+
+  }
+  .fortifid-checkbox-input {
+    margin-bottom: 0px;
+  }
+}

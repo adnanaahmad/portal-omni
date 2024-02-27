@@ -1,0 +1,10 @@
+{
+  "EMPLOYED": "Employed",
+  "UNEMPLOYED": "Unemployed",
+  "SELF_EMPLOYED": "Self Employed",
+  "BUSINESS_OWNER": "Business Owner",
+  "RETIRED": "Retired",
+  "STUDENT": "Student",
+  "MILITARY": "Military",
+  "OTHER": "Other"
+}

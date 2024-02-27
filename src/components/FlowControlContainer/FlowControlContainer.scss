@@ -1,0 +1,19 @@
+#overlay{
+    position:fixed;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    background-color: #acacac52;
+    z-index: 9;
+}
+
+.fortifid-form-loading {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+  }

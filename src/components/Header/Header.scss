@@ -1,0 +1,151 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/typography.scss";
+
+.fortifid-header {
+  background: var(--color-primary);
+  width: 100%;
+  height: 104px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 1px 0px $colorCoolGray;
+  padding: 8px 0px;
+
+  @include media-breakpoint-down(xs) {
+    height: 60px;
+  }
+
+  &__content {
+    position: relative;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(xs) {
+      height: 44px;
+    }
+  }
+
+  &__logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 128px;
+      max-height: 64px;
+
+      @include media-breakpoint-down(xs) {
+        width: 64px;
+        max-height: 40px;
+      }
+    }
+  }
+
+  &__nav-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    visibility: visible;
+  }
+
+  .fortifid-link-navigation {    
+    .fortifid-icon {
+      height: 22px;
+      margin-left: 5px;
+
+      @include media-breakpoint-down(xs) {
+        height: 15px;
+      }
+    }
+  }
+
+  &__nav-link-text {
+    display: inline-block;
+    font-weight: $fontSemiBold;
+    font-size: 14px;
+    line-height: 18px;
+    @include media-breakpoint-only(xs) {
+      font-size: 10px;
+    }
+  }
+}
+
+.fortifid-start-over-popup {
+  &__container {
+    background-color: $colorWhite;
+    border-radius: 4px;
+    border: 1px solid #cfd8dc;
+    box-sizing: border-box;
+    max-width: auto;
+    padding: 32px;
+
+    @include media-breakpoint-down(xs) {
+      max-width: auto;
+      padding: 24px 16px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    margin-top: 24px;
+
+    &>button:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      justify-content: center;
+      flex-direction: column;
+
+      &>button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    @include typography-title1;
+    line-height: 24px;
+    margin: 0 0 24px;
+
+    @include media-breakpoint-down(xs) {
+      margin: 0 0 16px;
+    }
+  }
+
+  &__description {
+    @include typography-footnote;
+  }
+
+  &-overlay {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+}

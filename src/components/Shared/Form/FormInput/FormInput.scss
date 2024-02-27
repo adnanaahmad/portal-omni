@@ -1,0 +1,717 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+@import "components/Shared/Styles/colors.scss";
+@import "components/Shared/Styles/typography.scss";
+
+@mixin input-base {
+  display: block;
+  text-align: left;
+  width: 100%;
+
+  .fortifid-input-label {
+    @include typography-body1;
+    color: $colorFontPrimary;
+    display: block;
+    margin-bottom: 8px;
+    pointer-events: none;
+  }
+
+  .fortifid-input-message {
+    @include typography-caption;
+    color: $colorFontPrimary;
+    display: block;
+    text-align: left;
+    margin-top: 4px;
+  }
+
+  .fortifid-input-error {
+    @include typography-caption;
+    color: $colorRed;
+    display: block;
+    text-align: left;
+    margin-top: 4px;
+  }
+
+  .fortifid-input-hint {
+    @include typography-footnote;
+    line-height: 16px;
+    color: $colorFontPrimary;
+    display: block;
+    text-align: left;
+    margin-top: 4px;
+  }
+
+  &.error {
+    input,
+    textarea {
+      border-color: $colorRed;
+      background-color: lighten($colorRed, 45%);
+      color: $colorRed;
+    }
+  }
+
+  &.disabled .fortifid-input-label {
+    color: $colorCoolGray;
+  }
+}
+
+.fortifid-checkbox-input {
+  @include input-base;
+  margin-bottom: 30px;
+  position: relative;
+  width: auto;
+
+  input {
+    display: none;
+  }
+
+  .fortifid-input-error {
+    margin-left: 34px;
+  }
+
+  .fortifid-input-label {
+    @include typography-footnote;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    pointer-events: auto;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      flex-shrink: 0;
+      height: 20px;
+      width: 20px;
+      margin-right: 14px;
+      margin-top: 2px;
+      background-color: $colorWhite;
+      border-radius: 2px;
+      border: solid 1px $colorCoolGray;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 7px;
+      opacity: 0;
+      transform: scale(0) rotate(45deg);
+      transition: all 0.3s;
+      transform: rotate(45deg);
+      height: 12px;
+      width: 6px;
+      border-bottom: 2px solid $colorWhite;
+      border-right: 2px solid $colorWhite;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+  }
+
+  &.checked {
+    .fortifid-input-label {
+      &::before {
+        background-color: $colorPrimaryBlue;
+        border: solid 1px lighten($colorPrimaryBlue, 55%);
+      }
+      &::after {
+        opacity: 1;
+        transform: scale(1) rotate(45deg);
+      }
+    }
+  }
+}
+
+.fortifid-radio-group {
+  @include input-base;
+  margin-bottom: 30px;
+
+  .fortifid-input-label {
+    text-align: center;
+  }
+
+  .fortifid-input-message,
+  .fortifid-input-error {
+    text-align: center;
+  }
+
+  .fortifid-radio-input {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-family: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorWhite;
+    border: solid 1px lighten($colorCoolGray, 10%);
+    color: $colorPrimaryBlue;
+    height: 40px;
+    padding: 11px 11px;
+
+    &.notSelected {
+      border: 2px solid red;
+      @include media-breakpoint-down(sm) {
+        padding: 12px 16px;
+      }
+    }
+    
+    &.checked {
+      background-color: $colorPrimaryBlue;
+      border: solid 1px $colorPrimaryBlue;
+
+      .fortifid-radio-input__label {
+        color: $colorWhite;
+      }
+      @media screen and (min-width: 769px) {
+        &:hover {
+          background-color: darken($colorPrimaryBlue, 10%);
+          border: solid 1px darken($colorPrimaryBlue, 10%);
+          transition: color 0.3s ease;
+        }
+      }
+    }
+    @media screen and (min-width: 769px) {
+      &:hover {
+        background-color: lighten($colorPrimaryBlue, 55%);
+        border: solid 1px $colorPrimaryBlue;
+        transition: color 0.3s ease;
+      }
+    }
+    
+
+    &.disabled {
+      cursor: default;
+      background-color: $colorLightGray;
+      border: solid 1px $colorCoolGray;
+      &:hover {
+        border: solid 1px $colorCoolGray;
+      }
+
+      .fortifid-radio-input__label {
+        color: $colorCoolGray;
+      }
+    }
+
+    &__label {
+      @include typography-body2;
+      color: $colorPrimaryBlue;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li {
+      flex: 1;
+      padding: 0 4px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  ul.responsive {
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+    }
+
+    li {
+      @include media-breakpoint-down(xs) {
+        padding: 8px 0;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.fortifid-checkbox-group {
+  @include input-base;
+  margin-bottom: 30px;
+
+  .fortifid-input-label {
+    text-align: center;
+  }
+
+  .fortifid-input-hint {
+    @include typography-caption;
+    text-align: center;
+  }
+
+  &.disabled .fortifid-input-hint {
+    color: $colorCoolGray;
+  }
+
+  .fortifid-input-message,
+  .fortifid-input-error {
+    text-align: center;
+  }
+
+  .fortifid-checkbox-input {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-family: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorWhite;
+    border: solid 1px lighten($colorCoolGray, 10%);
+    color: $colorPrimaryBlue;
+    height: 40px;
+    padding: 11px 16px;
+    margin: 0;
+
+    &.checked {
+      background-color: lighten($colorPrimaryBlue, 55%);
+      border: solid 1px $colorPrimaryBlue;
+      transition: color 0.3s ease;
+    }
+    @media screen and (min-width: 769px) {
+      &:hover {
+        background-color: lighten($colorPrimaryBlue, 55%);
+        border: solid 1px $colorPrimaryBlue;
+        transition: color 0.3s ease;
+      }
+    }
+
+    &.disabled {
+      cursor: default;
+      background-color: $colorLightGray;
+      border: solid 1px $colorCoolGray;
+      @media screen and (min-width: 769px) {
+        &:hover {
+          border: solid 1px $colorCoolGray;
+        }
+      }
+
+      .fortifid-checkbox-input__label {
+        color: $colorCoolGray;
+      }
+    }
+
+    &__label {
+      @include typography-body2;
+      color: $colorPrimaryBlue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    &__icon {
+      margin-left: 10px;
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li {
+      flex: 1;
+      padding: 0 8px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  ul.responsive {
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+    }
+
+    li {
+      @include media-breakpoint-down(xs) {
+        padding: 8px 0;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.fortifid-radio-image-group {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .fortifid-radio-image-input {
+    background: $colorWhite;
+    border-radius: 8px;
+    border: 1px solid $colorCoolGray;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 206px;
+    width: 206px;
+
+    margin: 0px 16px;
+    padding: 45px 16px 16px;
+
+    @include media-breakpoint-down(sm) {
+      margin: 16px 0px;
+      height: 48px;
+      width: 100%;
+      margin: 8px 0;
+      padding: 12px 16px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &__label {
+      @include typography-body1;
+      color: $colorCoolGray;
+      text-transform: none;
+      flex: auto;
+      display: flex;
+      text-align: center;
+      margin-top: 15px;
+
+      @include media-breakpoint-down(sm) {
+        @include typography-body2;
+        margin-top: 0;
+        margin-left: 16px;
+        text-align: left;
+      }
+    }
+
+    &__icon {
+      flex: initial;
+      height: 75px;
+
+      display: flex;
+      justify-content: center;
+
+      @include media-breakpoint-down(sm) {
+        height: 100%;
+        width: 35px;
+      }
+    }
+
+    &:hover {
+      background: #f2faff;
+      border: 3px solid $colorPrimaryBlue;
+      padding-top: 43px;
+
+      span {
+        color: $colorPrimaryBlue;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 10px 14px;
+      }
+    }
+
+    &.notSelected {
+      border: 2px solid red;
+      @include media-breakpoint-down(sm) {
+        padding: 12px 16px;
+      }
+    }
+
+    &.checked {
+      background: $colorPrimaryBlue;
+      border: 1px solid #c2d2d9;
+      padding-top: 45px;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+      span {
+        color: $colorWhite;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 12px 16px;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+.fortifid-select-input {
+  @include input-base;
+  margin-bottom: 16px;
+  position: relative;
+
+  .fortifid-input-label {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 3px 17px;
+    color: lighten($colorDarkGray, 30%);
+  }
+
+  &:focus-within {
+    & .fortifid-input-label {
+      @include typography-footnote;
+      top: 10px;
+      line-height: 10px;
+      color: $colorPrimaryBlue;
+      display: block;
+      text-align: left;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+    &:not(.empty) .fortifid-input-label {
+      @include typography-caption;
+      top: 0;
+      transform: none;
+    }
+  }
+
+  &:not(.empty) .fortifid-input-label {
+    @include typography-caption;
+    top: 0;
+    transform: none;
+  }
+
+  &.error .fortifid-input-label {
+    @include typography-body1;
+    color: $colorRed;
+  }
+
+  & & {
+    &__control {
+      @include typography-body1;
+      min-height: 48px;
+      background: $colorWhite;
+      border: solid 1px $colorCoolGray;
+      border-radius: 4px;
+      color: $colorFontPrimary;
+      &--is-disabled {
+        background: $colorLightGray;
+      }
+      &--is-focused {
+        border-color: $colorPrimaryBlue;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: none;
+      }
+    }
+    &__indicator-separator {
+      display: none;
+    }
+    &__value-container {
+      padding: 16px 16px 0;
+    }
+    &__single-value {
+      margin: 0;
+      top: auto;
+      transform: none;
+      &--is-disabled {
+        color: $colorCoolGray;
+      }
+    }
+    &__menu {
+      z-index: 100;
+    }
+    &__option {
+      @include typography-body1;
+      color: $colorFontPrimary;
+      &--is-selected {
+        background-color: lighten($colorCoolGray, 10%);
+        font-weight: $fontMedium;
+      }
+      &--is-focused {
+        background-color: lighten($colorCoolGray, 10%);
+      }
+    }
+  }
+
+  &:not(.disabled):hover & {
+    &__control {
+      border: solid 1px lighten($colorDarkGray, 30%);
+      &--is-focused {
+        border-color: $colorPrimaryBlue;
+      }
+    }
+  }
+
+  &.error & {
+    &__control {
+      border-color: $colorRed;
+      background-color: lighten($colorRed, 45%);
+      color: $colorRed;
+    }
+  }
+}
+
+.fortifid-currency-input,
+.fortifid-number-input,
+.fortifid-text-input,
+.fortifid-text-area {
+  @include input-base;
+  margin-bottom: 16px;
+  position: relative;
+
+  .fortifid-input-label {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 3px 17px;
+    color: lighten($colorDarkGray, 30%);
+  }
+
+  &:focus-within .fortifid-input-label {
+    @include typography-caption;
+    color: $colorPrimaryBlue;
+    top: 0;
+    transform: none;
+  }
+
+  &:not(.empty) .fortifid-input-label {
+    @include typography-caption;
+    top: 0;
+    transform: none;
+  }
+
+  &.error .fortifid-input-label {
+    @include typography-caption;
+    color: $colorRed;
+    top: 0;
+    transform: none;
+  }
+
+  &.error {
+    input {
+      &:focus,
+      &:hover,
+      &:focus:hover {
+        border: solid 1px $colorRed;
+      }
+    }
+  }
+
+  input,
+  textarea {
+    position: relative;
+    font-family: inherit;
+    @include typography-body1;
+    align-items: center;
+    background-color: $colorWhite;
+    border: solid 1px $colorCoolGray;
+    color: $colorFontPrimary;
+    display: flex;
+    height: 48px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 16px 16px 0;
+
+    &:hover {
+      border: solid 1px lighten($colorDarkGray, 30%);
+    }
+
+    &:focus {
+      border: solid 1px $colorPrimaryBlue;
+
+      &:hover {
+        border: solid 1px $colorPrimaryBlue;
+      }
+    }
+
+    &:disabled {
+      color: $colorCoolGray;
+      background-color: $colorLightGray;
+      &:hover {
+        border: solid 1px $colorCoolGray;
+      }
+    }
+  }
+}
+
+.fortifid-number-input {
+  .fortifid-input-label {
+    color: #4f717f;
+    left: auto;
+    right: 0;
+  }
+  &:focus-within .fortifid-input-label,
+  &:not(.empty) .fortifid-input-label,
+  &.error .fortifid-input-label {
+    @include typography-body1;
+    top: 24px;
+    transform: translateY(-50%);
+  }
+  input {
+    padding-top: 0;
+    padding-right: 100px;
+  }
+}
+
+.fortifid-text-area {
+  .fortifid-input-label {
+    top: 24px;
+    transform: translateY(-50%);
+  }
+
+  textarea {
+    height: 96px;
+    resize: none;
+  }
+}

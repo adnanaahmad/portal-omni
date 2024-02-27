@@ -1,0 +1,70 @@
+{
+    "ExistingCustomerData": [
+        {
+            "id": 1,
+            "demo_applicant": "Green Path Applicant",
+            "dataName":"Joshua",
+            "ssn": "778-62-8144",
+            "dob": "08/19/1985",
+            "zip": "32277",
+            "type": "Personal Loan",
+            "loanAmount": "10000",
+            "loanPurpose": "Business Financing"
+        },
+        {
+            "id": 2,
+            "demo_applicant": "Red Path Applicant",
+            "dataName":"Tiffany",
+            "ssn": "757-85-7495",
+            "dob": "04/04/2000",
+            "zip": "32277",
+            "type": "Personal Loan",
+            "loanAmount": "10000",
+            "loanPurpose": "Business Financing"
+        },
+        {
+            "id": 3,
+            "demo_applicant": "Yellow Path Applicant",
+            "dataName":"Anne",
+            "ssn": "805-14-1893",
+            "dob": "10/01/1995",
+            "zip": "32277",
+            "type": "Personal Loan",
+            "loanAmount": "10000",
+            "loanPurpose": "Business Financing"
+        },
+        {
+            "id": 4,
+            "demo_applicant": "Green Path Applicant",
+            "dataName":"Joshua",
+            "ssn": "778-62-8155",
+            "dob": "08/19/2001",
+            "zip": "32288",
+            "type": "Small Business Loan",
+            "loanAmount": "10000",
+            "loanPurpose": "Business Financing"
+        },
+        {
+            "id": 5,
+            "demo_applicant": "Red Path Applicant",
+            "dataName":"Tiffany",
+            "ssn": "757-85-7499",
+            "dob": "06/06/2004",
+            "zip": "32299",
+            "type": "Small Business Loan",
+            "loanAmount": "10000",
+            "loanPurpose": "Business Financing"
+        },
+        {
+            "id": 6,
+            "demo_applicant": "Yellow Path Applicant",
+            "dataName":"Anne",
+            "ssn": "805-14-1876",
+            "dob": "10/01/1990",
+            "zip": "32205",
+            "type": "Small Business Loan",
+            "loanAmount": "10000",
+            "loanPurpose": "Business Financing"
+        }
+    ]
+}

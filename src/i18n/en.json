@@ -1,0 +1,829 @@
+{
+  "globalMessages": {
+    "settingsLoadingError": "An error occurred during app loading. Try to reload a page.",
+    "submissionError": "An error occurred during form submission.",
+    "getExistingDataError":"Data does not exist. Please fill correct information and try again.",
+    "stateLoadError": "Unable to sync the application.",
+    "phoneValidation":"The phone number is already in use, try with different one.",
+    "EmailValidation":"The email address is already in use, try with different one.",
+    "coApplicantEmailValidation":"The co-applicant email address is already in use, try with different one.",
+    "ssnValidation":"The ssn number is already in use, try with different one.",
+    "linkVerificationError": "The information provided does not match our records.",
+    "submitApplicationWarning":"Please do not close or refresh the browser tab. This page will let you know the next step after we have recieved your application.",
+    "linkVerification":"Your link has expired.",
+    "emailValidation":"Entered email does not exist, try different one!",
+    "varificationCodeSentSuccess":"Verification code has been sent successfully, please check your email.",
+    "demoPhoneNoUpdated":"Phone No updated successfully.",
+    "cannotPerformOperation":"You are no longer able to perform this operation."
+  },
+  "header": {
+    "links": {
+      "back": "Go Back",
+      "restart": "Start Over",
+      "contact": "Contact Us"
+    }
+  },
+  "formErrors": {
+    "requiredField": "This field is required"
+  },
+  "popups": {
+    "startOver": {
+      "cancelButton": "Cancel",
+      "description": "This will clear your answers and start again from the beginning.",
+      "startButton": "Start Over",
+      "title": "Are you sure you want to start over?"
+    }
+  },
+  "progressBar": {
+    "partOne": "Part 1:",
+    "application": "Application Form",
+    "partTwo": "Part 2:",
+    "phoneVerification": "Phone Verification",
+    "partThree": "Part 3:",
+    "proofOfIdentity": "Proof of Identity",
+    "partFour": "Part 4:",
+    "proofOfIncome": "Proof of Income"
+  },
+  "confirmButton": "Confirm & Continue",
+  "continueButton": "Continue with an existing application",
+  "backButton": "Back to review",
+  "reviewButton": "Review Application",
+  "submitButton": "Submit",
+  "nextButton": "Next",
+  "prevButton": "Previous",
+  "saveButton": "Save",
+  "cancelButton": "Cancel",
+  "forms": {
+    "AddressInfoForm": {
+      "fields": {
+        "addressStreet": {
+          "error": "Please enter a valid Street Address",
+          "label": "Street Address"
+        },
+        "addressAptSuiteNumber": {
+          "error": "Please enter a valid Apt Suite Number",
+          "label": "Apt, Unit, Suite # (optional)"
+        },
+        "addressCity": {
+          "error": "Please enter a valid City",
+          "label": "City"
+        },
+        "addressState": {
+          "label": "State",
+          "error": "Selection required"
+        },
+        "addressZip": {
+          "error": "Please enter a valid ZIP code",
+          "label": "ZIP Code"
+        },
+        "addressMonths": {
+          "label": "Months",
+          "error": "Number of months should be less than 12",
+          "minValueError": "Please input how long you have been living at current address"
+        },
+        "addressYears": {
+          "label": "Years",
+          "error": "Please enter a valid number of years"
+        },
+        "formerAddressMonths": {
+          "label": "Months (optional)"
+        }
+      },
+      "addressMonthsQuestion": "How long have you lived at this address?",
+      "formerAddressBlockTitle": "Please provide your former residential address as your current address is less than 24 months old",
+      "formerAddressMonthsQuestion": "How long have you lived at your former address?",
+      "title": "Residential address information"
+    },
+    "FormerAddressInfoForm": {
+      "fields": {
+        "formerAddressStreet": {
+          "error": "Please enter a valid Street Address",
+          "label": "Street Address"
+        },
+        "formerAddressAptSuiteNumber": {
+          "error": "Please enter a valid Apt Suite Number",
+          "label": "Apt, Unit, Suite # (optional)"
+        },
+        "formerAddressCity": {
+          "error": "Please enter a valid City",
+          "label": "City"
+        },
+        "formerAddressState": {
+          "label": "State",
+          "error": "Selection required"
+        },
+        "formerAddressZip": {
+          "error": "Please enter a valid ZIP code",
+          "label": "ZIP Code"
+        },
+        "formerAddressMonths": {
+          "label": "Months",
+          "error": "Number of months should be less than 12"
+        },
+        "formerAddressYears": {
+          "label": "Years",
+          "error": "Please enter a valid number of years"
+        }
+      },
+      "formerAddressBlockTitle": "Please provide your former residential address as your current address is less than 24 months old",
+      "formerAddressMonthsQuestion": "How long have you lived at your former address?",
+      "title": "Former address information"
+    },
+    "DLNForm": {
+      "title": "Your driver’s license information",
+      "fields": {
+        "driversLicenseNumber": {
+          "label": "Driver’s License Number",
+          "error": "Please enter a valid driver’s license number"
+        },
+        "driversLicenseExpireDate": {
+          "label": "Expiration Date (MM/DD/YYYY)",
+          "error": "Please enter a valid date"
+        },
+        "driversLicenseState": {
+          "label": "State of Issue",
+          "error": "Selection required"
+        },
+        "hasDriversLicense": {
+          "label": "I do not have a driver’s license"
+        }
+      }
+    },
+    "EmploymentInfoForm": {
+      "fields": {
+        "employmentAddressStreet": {
+          "error": "Please enter a valid Street Address",
+          "label": "Street Address"
+        },
+        "employmentAddressAptSuiteNumber": {
+          "error": "Please enter a valid Apt Suite Number",
+          "label": "Apt, Unit, Suite # (optional)"
+        },
+        "employmentAddressCity": {
+          "error": "Please enter a valid City",
+          "label": "City"
+        },
+        "employmentAddressState": {
+          "error": "Selection required",
+          "label": "State"
+        },
+        "employmentAddressZip": {
+          "error": "Please enter a valid ZIP code",
+          "label": "ZIP Code"
+        },
+        "employmentEmployerName": {
+          "error": "Please enter a valid employer name",
+          "label": "Current Employer"
+        },
+        "employmentJobTitle": {
+          "error": "Please enter a valid job title",
+          "label": "Job Title"
+        },
+        "employmentMonths": {
+          "label": "Months",
+          "error": "Number of months should be less than 12",
+          "minValueError": "Please input your lenght of employment"
+        },
+        "employmentYears": {
+          "label": "Years",
+          "error": "Please enter a valid number of years"
+        },
+        "employmentPhoneNumber": {
+          "error": "Please enter a valid phone number",
+          "label": "Employer Phone Number"
+        },
+        "employmentStatus": {
+          "label": "Employment Status",
+          "error": "Selection required"
+        }
+      },
+      "lengthSubtitle": "Current employment length",
+      "subtitle": "Employment address information",
+      "title": "Employment Information"
+    },
+    "GetStartedForm": {
+      "submit": "Get Started",
+      "title": "Type of loan",
+      "subtitle": "Select the option that works best for you",
+      "loanTypes": {
+        "creditCard": "Credit Card",
+        "personalLoan": "Personal Loan",
+        "smallBusinessAndEquipment": "Small Business & Equipment"
+      },
+      "demoTypes": {
+        "label": "Demo mode",
+        "creditCard": "Credit Card",
+        "personalLoan": "Personal Loan",
+        "smallBusinessAndEquipment": "Small Business & Equipment"
+      }
+    },
+    "DisclaimerForm": {
+      "submit": "Accept & Continue",
+      "title": "IMPORTANT INFORMATION ABOUT OPENING A NEW ACCOUNT",
+      "subtitle": "Federal law requires all financial institutions to obtain, verify, and record information that identifies each person who opens an account. This means that we will ask for your name, address, date of birth, and other information that will allow us to identify you when we open a new account for you. We may also ask to see your driver’s license or other identifying documents, and we may obtain a report from a consumer reporting agency or take other actions to verify information about your identity."
+    },
+    "GovtDocumentScanningForm": {
+      "title": "Scan your government issued ID to populate fields or manually type your information",
+      "scanType":{
+        "camera":"camera",
+        "keypad":"keypad"
+      }
+    },
+    "ExistingCustomerLoadingDataForm": {
+      "title": "We are currently gathering your customer information.",
+      "subtitle": "Please wait while we gather your information. Do not close this window."
+    },
+    "ExistingCustomerForm": {
+      "submit": "Get Started",
+      "title": "Are you currently an existing customer of this bank?",
+      "subtitle": "Select your answer below",
+      "existingCustmerTypes": {
+        "yes": "Yes, I am",
+        "no": "No, I am not"
+      }
+    },
+    "ExistingCustomerInfoForm": {
+      "submit": "Submit",
+      "title": "Existing Customer Information",
+      "subtitle": "Please enter the following information to continue.",
+      "fields": {
+        "addressZip": {
+          "error": "Please enter a valid ZIP code",
+          "label": "ZIP Code"
+        },
+        "federalIdNumber": {
+          "label": "Social Security Number",
+          "error": "Please enter a valid Social Security Number"
+        },
+        "birthDate": {
+          "label": "Date of Birth (MM/DD/YYYY)",
+          "error": "Please enter a valid date"
+        },
+        "coApplication": {
+          "label": "Is this a co-application?",
+          "optionTrue": "Yes",
+          "optionFalse": "No",
+          "hint": "For online application, only one co-applicant is allowed. If you want to add more co-applicants, please apply at a branch."
+        },
+        "coApplicationFirstName": {
+          "label": "Co-applicant First Name",
+          "error": "First Name can only include letters, dashes, apostrophe and space"
+        },
+        "coApplicationMiddleName": {
+          "label": "Co-applicant Middle Name (optional)",
+          "error": "Middle Name can only include letters, dashes, apostrophe and space"
+        },
+        "coApplicationLastName": {
+          "label": "Co-applicant Last Name",
+          "error": "Last Name can only include letters, dashes, apostrophe and space"
+        },
+        "coApplicationEmailAddress": {
+          "label": "Co-applicant Email Address",
+          "error": "Please enter a valid email address",
+          "suggestion": "Did you mean {email}?",
+          "hint": "After you submit your application, we will send an email to your co-applicant to invite them to complete their application."
+        },
+        "terms": {
+          "label": "By checking this box I agree that I have read, understood, and consent to FortifID’s Consent and Terms of Use"
+        }
+      },
+      "coApplicant": {
+        "title": "Please review the below information",
+        "subtitle": "Loan information"
+      }
+    },
+    "BasicInfoForm": {
+      "title": "Your basic information",
+      "subtitle": "Co-applicant basic information",
+      "fields": {
+        "demoData":{
+          "label": "Demo Data",
+          "error": "Please Select Proper Values"
+        },
+        "firstName": {
+          "label": "First Name",
+          "error": "First Name can only include letters, dashes, apostrophe and space"
+        },
+        "middleName": {
+          "label": "Middle Name (optional)",
+          "error": "Middle Name can only include letters, dashes, apostrophe and space"
+        },
+        "lastName": {
+          "label": "Last Name",
+          "error": "Last Name can only include letters, dashes, apostrophe and space"
+        },
+        "mobilePhone": {
+          "label": "Mobile Phone Number (xxx) xxx-xxxx",
+          "error": "Please enter a valid phone number",
+          "hint": "We will send a text to this phone number for authentication."
+        },
+        "emailAddress": {
+          "label": "Email Address",
+          "error": "Please enter a valid email address",
+          "suggestion": "Did you mean {email}?"
+        },
+        "coApplication": {
+          "label": "Is this a co-application?",
+          "optionTrue": "Yes",
+          "optionFalse": "No",
+          "hint": "For online application, only one co-applicant is allowed. If you want to add more co-applicants, please apply at a branch."
+        },
+        "coApplicationFirstName": {
+          "label": "Co-applicant First Name",
+          "error": "First Name can only include letters, dashes, apostrophe and space"
+        },
+        "coApplicationMiddleName": {
+          "label": "Co-applicant Middle Name (optional)",
+          "error": "Middle Name can only include letters, dashes, apostrophe and space"
+        },
+        "coApplicationLastName": {
+          "label": "Co-applicant Last Name",
+          "error": "Last Name can only include letters, dashes, apostrophe and space"
+        },
+        "coApplicationEmailAddress": {
+          "label": "Co-applicant Email Address",
+          "error": "Please enter a valid email address",
+          "suggestion": "Did you mean {email}?",
+          "hint": "After you submit your application, we will send an email to your co-applicant to invite them to complete their application."
+        },
+        "terms": {
+          "label": "By checking this box I agree that I have read, understood, and consent to FortifID’s Consent and Terms of Use"
+        }
+      },
+      "coApplicant": {
+        "title": "Please review the below information",
+        "subtitle": "Loan information"
+      }
+    },
+    "BusinessInfoForm": {
+      "feid_hint": "Use a social security number (SSN) if your business does not have an employment identification number (EIN).",
+      "fssn_hint": "We will ask for your social security number (SSN) in the upcoming personal information form.",
+      "fields": {
+        "businessType": {
+          "error": "Selection required",
+          "label": "Business Type"
+        },
+        "typeOfOwnership": {
+          "error": "Selection required",
+          "label": "Type of Ownership"
+        },
+        "companyName": {
+          "error": "Company name can only contain the following special letters |^,'~?!&$#@\\-+/()",
+          "label": "Company Name"
+        },
+        "doingBusinessAs": {
+          "error": "This field can only contain letters, dashes and apostrophes",
+          "label": "Doing Business As (optional)"
+        },
+        "phoneNumber": {
+          "error": "Please enter a valid phone number",
+          "label": "Business Phone Number"
+        },
+        "webSite": {
+          "error": "Please enter a valid website",
+          "label": "Website (optional)"
+        },
+        "addressStreet": {
+          "error": "Please enter a valid Street Address",
+          "label": "Street Address"
+        },
+        "addressAptSuiteNumber": {
+          "error": "Please enter a valid Apt Suite Number",
+          "label": "Apt, Unit, Suite # (optional)"
+        },
+        "addressCity": {
+          "error": "Please enter a valid City",
+          "label": "City"
+        },
+        "addressState": {
+          "error": "Selection required",
+          "label": "State"
+        },
+        "addressZip": {
+          "error": "Please enter a valid ZIP code",
+          "label": "ZIP Code"
+        },
+        "federalIdNumberType": {
+          "error": "Selection required",
+          "label": "Federal Employment Identification Number",
+          "optionEIN": "EIN",
+          "optionSSN": "SSN"
+        },
+        "EIN": {
+          "error": "Please enter a valid Employment Identification Number",
+          "label": "Employment Identification Number"
+        },
+        "SSN": {
+          "error": "Please enter a valid Social Security Number",
+          "label": "Social Security Number"
+        },
+        "dateEstablished": {
+          "error": "Please enter a valid date",
+          "label": "Date Established (MM/DD/YYYY)"
+        },
+        "registrationState": {
+          "error": "Selection required",
+          "label": "Registration State"
+        }
+      },
+      "title": "Let’s start with your business information"
+    },
+    "SSNForm": {
+      "title": "Welcome {name}! Please provide your personal information",
+      "fields": {
+        "federalIdNumber": {
+          "label": "Social Security Number",
+          "error": "Please enter a valid Social Security Number"
+        },
+        "birthDate": {
+          "label": "Date of Birth (MM/DD/YYYY)",
+          "error": "Please enter a valid date"
+        },
+        "isUSCitizen": {
+          "label": "Are you a U.S. Citizen?",
+          "optionTrue": "Yes, I’m a U.S. citizen",
+          "optionFalse": "No, I’m not a U.S. citizen"
+        }
+      }
+    },
+    "IncomeHousingForm": {
+      "title": "Residential Address Information",
+      "fields": {
+        "homeRentOrOwn": {
+          "label": "Do you rent or own this property?",
+          "optionRent": "Rent",
+          "optionOwn": "Own",
+          "optionOther": "Other"
+        },
+        "homeMonthlyRent": {
+          "label": "Monthly Rent Payment",
+          "currency": "$",
+          "error": "Must be a valid amount"
+        },
+        "homeMonthlyMortgage": {
+          "label": "Monthly Mortgage Payment",
+          "currency": "$",
+          "error": "Must be a valid amount"
+        },
+        "homeIsFullyOwnedNoMortgage": {
+          "label": "Fully owned, no mortgage"
+        },
+        "homeAdditionalDetails": {
+          "label": "Please provide additional details"
+        }
+      }
+    },
+    "IncomeBankAccountsForm": {
+      "title": "Bank Information",
+      "fields": {
+        "financialBankName": {
+          "label": "Bank Name",
+          "error": "Please enter a valid Bank Name"
+        },
+        "financialAccountType": {
+          "label": "Please provide your bank account details",
+          "hint": "Select all that apply",
+          "optionChecking": "Checking",
+          "optionSavings": "Savings",
+          "optionBoth": "Both"
+        },
+        "noAccount": {
+          "label": "I do not have a bank account"
+        },
+        "financialCreditCardCashAdvStatus": {
+          "label": "How many times have you taken a cash advance from a credit card in the last 6 months?",
+          "optionZero": "0",
+          "optionOne": "1-2",
+          "optionMore": "3 or more"
+        }
+      }
+    },
+    "IncomeInformationForm": {
+      "title": "Income Information",
+      "fields": {
+        "incomeSource": {
+          "label": "Income Source",
+          "error": "Selection required"
+        },
+        "incomeIndividualAnnualGross": {
+          "label": "Individual Gross Annual Income",
+          "hint": "Income from alimony, child support, and separate maintenance does not need to be disclosed if you don’t want it to be part of your application.",
+          "error": "Should be a valid amount"
+        },
+        "incomeHouseholdAnnualGross": {
+          "label": "Household Annual Income",
+          "hint": "Household annual income is the combined gross income of all household members.  If you are the only one, enter your individual gross annual income.",
+          "error": "Should be a valid amount",
+          "valueError": "Should be greater than or equal to Individual Gross Annual Income"
+        },
+        "netIncome": {
+          "label": "Net Income",
+          "hint": " ",
+          "error": "Should be a valid amount",
+          "valueError": "Net income error"
+        }
+      }
+    },
+    "LoanDetailsForm": {
+      "fields": {
+        "loanAmount": {
+          "label": "Request Amount",
+          "error": "Should be a valid amount",
+          "minValueError": "Minimum amount is $500"
+        },
+        "loanPurpose": {
+          "label": "Loan Purpose",
+          "hint": "If the above information is incorrect, please do not proceed with this application. Ask your primary applicant to submit a new application.",
+          "error": "Selection required"
+        }
+      },
+      "title": "I need some details about your loan"
+    },
+    "ResendCodeForm": {
+      "title": "Resend Verification Code",
+      "subtitle": "Please enter your email address to receive the code.",
+      "submitButton": "Submit",
+      "fields": {
+        "emailAddress": {
+          "label": "Email Address",
+          "error": "Please enter a valid email address",
+          "suggestion": "Did you mean {email}?"
+        }
+      }
+    },
+    "ReturnLinkForm": {
+      "title": "Continue with an existing application",
+      "subtitle": "Please enter the following information to continue.",
+      "submitButton": "Submit",
+      "fields": {
+        "verificationCode": {
+          "label": "Verification Code",
+          "hint": "{resendCodeLink}",
+          "resendCodeLink": {
+            "label": "Resend code"
+          }
+        },
+        "federalIdNumberLast4Digits": {
+          "label": "Last 4 digits of SSN",
+          "error": "Please enter a valid Social Security Number"
+        },
+        "birthDate": {
+          "label": "Date of Birth (MM/DD/YYYY)",
+          "error": "Please enter a valid date"
+        }
+      }
+    },
+    "SummaryInfoForm": {
+      "submit": "Submit",
+      "title": "Is all this information correct?",
+      "fields": {
+        "edit": {
+          "label": "Edit"
+        },
+        "loan": {
+          "loanAmount": {
+            "label": "Loan Amount: {loanAmount}"
+          },
+          "loanPurpose": {
+            "label": "Loan Purpose: {loanPurpose}"
+          }
+        },
+        "smallBusiness": {
+          "label": "Business Information",
+          "businessType": {
+            "label": "Business Type: {businessType} "
+          },
+          "companyName": {
+            "label": "Company Name: {companyName}"
+          },
+          "doingBusinessAs": {
+            "label": "Doing Businnes As: {doingBusinessAs}"
+          },
+          "typeOfOwnership": {
+            "label": "Type of Ownership: {typeOfOwnership}"
+          },
+          "phoneNumber": {
+            "label": "Business Phone Number: {phone}"
+          },
+          "webSite": {
+            "label": "Website: {webSite}"
+          },
+          "federalIdNumber": {
+            "label": "Federal Tax Identification Number: {federalIdNumber}"
+          },
+          "dateEstablished": {
+            "label": "The business was established on {dateEstablished}. It was registered in {registrationState}"
+          },
+          "address": {
+            "label": "The business address is:"
+          },
+          "addressAptSuiteNumber": {
+            "label": "{addressStreet} {addressAptSuiteNumber}"
+          },
+          "addressCityState": {
+            "label": "{addressCity}, {addressState}"
+          },
+          "addressZip": {
+            "label": "{addressZip}"
+          }
+        },
+        "personal": {
+          "label": "Personal Information",
+          "fullName": {
+            "label": "{firstName} {middleName} {lastName}"
+          },
+          "federalIdNumber": {
+            "label": "{fid}"
+          },
+          "dateOfBirth": {
+            "label": "{dob}"
+          },
+          "phoneNumber": {
+            "label": "{phone}"
+          },
+          "emailAddress": {
+            "label": "{email}"
+          },
+          "ExistingfullName": {
+            "label": "{firstName} {middleName} {lastName}"
+          },
+          "ExistingfederalIdNumber": {
+            "label": "{fid}"
+          },
+          "ExistingdateOfBirth": {
+            "label": "{dob}"
+          },
+          "ExistingphoneNumber": {
+            "label": "{phone}"
+          },
+          "ExistingemailAddress": {
+            "label": "{email}"
+          },
+          "isUSCitizen": {
+            "label": "You are {citizen}"
+          },
+          "driversLicense": {
+            "label": "Your driver's license number is {license}. It was issued in {state} and expires on {expires}."
+          },
+          "coApplicationFullName": {
+            "label": " {firstName} {middleName} {lastName} "
+          },
+          "coApplicationEmailAddress": {
+            "label": " {email} "
+          }
+        },
+        "residentialAddress": {
+          "label": "Residential Address Information",
+          "propertyType":{
+            "label":"You are {propertyType}ing this property for {monthly_rent} per month:"
+          },
+          "summaryPropertyType": {
+            "label": "You are {rentPropertType}ing this property for {rent} per month:"
+          },
+          "homeIsFullyOwnedNoMortgage": {
+            "label": "You own this property:"
+          },
+          "homeAdditionalDetails": {
+            "label": "Other: {other}"
+          },
+          "addressAptSuiteNumber": {
+            "label": "{addressStreet} {addressAptSuiteNumber}"
+          },
+          "addressCityState": {
+            "label": "{addressCity}, {addressState}"
+          },
+          "addressCityStateZip": {
+            "label": "{addressZip}"
+          },
+          "addressMonths": {
+            "label": "{addressMonths} {monthsText} living here"
+          },
+          "formerAddress": {
+            "label": "You previously lived in this property:"
+          }
+        },
+        "income": {
+          "label": "Income Information",
+          "unemployed": {
+            "label": "{incomeSource}."
+          },
+          "incomeSource": {
+            "label": "Your employment status is {incomeSource}."
+          },
+          "incomeIndividualAnnualGross": {
+            "label": "Individual annual income is {incomeIndividualAnnualGross}."
+          },
+          "incomeHouseholdAnnualGross": {
+            "label": "Total household annual income is {incomeHouseholdAnnualGross}."
+          },
+          "netIncome": {
+            "label": "Net income is {netIncome}."
+          },
+          "financial": {
+            "label": "You have a {financialAccountType} account at {financialBankName}."
+          },
+          "financialCreditCardCashAdvStatus": {
+            "label": "{financialCreditCardCashAdvStatus}"
+          }
+        },
+        "employment": {
+          "label": "Employment Information",
+          "unemployed": {
+            "label": "{employmentStatus}."
+          },
+          "employed": {
+            "label": "{employmentStatus} as {employmentJobTitle} for {employmentMonths} {monthsText} at {employmentEmployerName}."
+          },
+          "employmentPhoneNumber": {
+            "label": "Employer Phone Number: {employmentPhoneNumber}"
+          },
+          "employmentAddress": {
+            "label": "Employer Address:"
+          },
+          "employmentAddressAptSuiteNumber": {
+            "label": "{employmentAddressStreet} {employmentAddressAptSuiteNumber}"
+          },
+          "employmentAddressStateCity": {
+            "label": "{employmentAddressCity}, {employmentAddressState}"
+          },
+          "employmentAddressZip": {
+            "label": "{employmentAddressZip}"
+          }
+        },
+        "submission": {
+          "label": "Please make sure you enter the correct information. Once it is submitted it cannot be changed."
+        }
+      }
+    },
+    "SubmitApplicationForm": {
+      "title": "Submitting part 1 of your application..."
+    }
+  },
+  "applicationStatusPage": {
+    "enterMessage": "Part 1 of your application has been submitted!",
+    "title": "Your Next Steps",
+    "expiredTitle": "You will need to restart the application process",
+    "expiredMessage": "Your application has expired.",
+    "completionTitle": "You’re All Set",
+    "completionSubtitle": "We’ll notify you once we review your application, and let you know if we need any additional information from you. <p>If you have any questions, please <a>contact us</a></p>.",
+    "errorTitle": "There is no further action that is needed from you at this time",
+    "errorSubtitle": "We’ll notify you once we review your application, and let you know if we need any additional information from you. If you have any questions, please <a>contact us</a>.",
+    "maxRetriesTitle": "We could not process your application",
+    "contactUs": "If you have any questions, please <a>contact us</a>.",
+    "tooManyRequests": "You have reached the limit for sending a verification link",
+    "expiredLink": "Your verification link has expired, please resend",
+    "steps": {
+      "consumerInsights": {
+        "title": "Submitting part 1 of your application…",
+        "notification": "Please do not close or refresh the browser tab. This page will let you know the next step after we have recieved your application."
+      },
+      "application": {
+        "title": "Verifying your aplication",
+        "success": "Completed Application",
+        "error": "Unable to verify your application"
+      },
+      "mfa": {
+        "title": "Part 2: Confirm Phone Number",
+        "text": "We will text a link to {mobilePhone}. Please click the link in that text to continue.",
+        "textexisting": "We will text a link to {phone}. Please click the link in that text to continue.",
+        "buttons": {
+          "sms": "Text me the link"
+        },
+        "waitMessage": "Waiting for your response…",
+        "retryMessage": "Didn’t get a link? <a>Resend</a>",
+        "success": "Phone number confirmed"
+      },
+      "identity": {
+        "title": "Part 3: Submit Proof of Identity",
+        "text": "We will text a link with instructions for confirming your identity to {phone}.",
+        "photo": "<b>Have your driver’s license ready and find a well-lit place to take a photo.</b>",
+        "buttons": {
+          "sms": "Text me the link"
+        },
+        "waitMessage": "Waiting for your response…",
+        "retryMessage": "Didn’t get a link? <a>Resend</a>",
+        "success": "Proof of Identity Submitted",
+        "failed": "Proof of Identity Failed"
+      },
+      "income": {
+        "title": "Part 4: Submit Proof of Income",
+        "text": "Request a link to securely submit your income information through our partner, DirectID.",
+        "buttons": {
+          "sms": "Text me the link",
+          "email": "Email me the link"
+        },
+        "waitMessage": "Waiting for your response…",
+        "retryMessage": "Didn’t get a link? <a>Resend</a>",
+        "success": "Proof of Income Submitted"
+      },
+      "incomeInsights": {
+        "title": "We’re passing along your application to a loan officer…",
+        "notification": "Please do not close or refresh the browser tab. This page will let you know the next step after we have recieved your proof of income."
+      }
+    }
+  },
+  "404Page": {
+    "title": "404: Not Found",
+    "subtitle": "You just hit a route that doesn't exist..."
+  }
+}
